@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HomePage = () => {
@@ -14,7 +15,10 @@ const HomePage = () => {
           <div className="grid place-content-center h-screen">
           <div>
             <p className="text-[86px] text-center text-[#9B4819]"><span className="italic">Hello,</span> I am Borhan!</p>
-            <p className="text-center text-xl">Enjoying web development because its a combination of creativity and problem solving.</p>
+            <p className="text-center text-3xl">Enjoying web development because its a combination of creativity and problem solving.</p>
+          </div>
+          <div className="text-center mt-4">
+            <Link href="https://www.linkedin.com/in/tsmborhan" className="border-2 px-3 py-1 text-white bg-[#9B4819]">Get in Touch</Link>
           </div>
           </div>
         </div>
