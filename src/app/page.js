@@ -1,12 +1,5 @@
-import Image from 'next/image'
+import HomePage from './components/homepage/page'
 
 export default function Home() {
-  return (
-    <>
-    <div className='grid place-content-center h-screen'>
-    <div>Welcome to My Website</div>
-    <div>MDBORHAN.COM</div>
-    </div>
-    </>
-  )
+  return (<><HomePage/></>)
 }
