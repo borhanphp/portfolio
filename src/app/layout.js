@@ -1,17 +1,20 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Radley } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const radley = Radley({
+  weight: '400', 
+  subsets: ['latin']
+})
 
 export const metadata = {
-  title: 'Full Stack Web Developer',
-  description: 'Enjoying web development because this is a combination of creativity and problem solving.',
+  title: 'Borhan Uddin - Full Stack Web Developer',
+  description: 'Enjoying web development because its a combination of creativity and problem solving.',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={radley.className}>{children}</body>
     </html>
   )
 }
