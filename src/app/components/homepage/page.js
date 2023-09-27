@@ -2,7 +2,11 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <>
+        <div className='grid place-content-center h-screen'>
+            <div>Hello</div>
+        </div>
+    </>
   )
 }
 
