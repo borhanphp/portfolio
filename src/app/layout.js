@@ -18,8 +18,6 @@ export default function RootLayout( { children } ) {
       <body className={radley.className}>
         <div>
           <NavbarRight />
-          {/* <Blog /> */}
-          {/* <PortfolioShowcase /> */}
           {children}
         </div>
       </body>

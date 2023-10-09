@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
-import { Home, Server } from 'react-feather'
+import { Home, Lock, Server } from 'react-feather'
 
 const NavbarRight = () => {
     const data = [
@@ -13,6 +12,11 @@ const NavbarRight = () => {
             title: 'About',
             icon: <Server />,
             link: '/about'
+        },
+        {
+            title: 'Login',
+            icon: <Lock />,
+            link: '/login'
         },
         // {
         //     title: 'Portfolio',

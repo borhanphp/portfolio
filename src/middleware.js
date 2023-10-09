@@ -1,31 +1,31 @@
-// import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server';
 
 
 export function middleware() {
-    //     const path = NextRequest?.nextUrl?.pathname
+    if ( NextRequest && NextRequest.nextUrl ) {
+        const path = NextRequest.nextUrl.pathname;
+        const isPublicPath = path === '/login' || path === '/signup' || path === '/verifyemail';
+        const token = NextRequest.cookies?.get( 'token' )?.value || '';
 
-    //     const isPublicPath = path === '/login' || path === '/signup' || path === '/verifyemail'
+        if ( isPublicPath && token ) {
+            return NextResponse.redirect( new URL( '/', NextRequest.nextUrl ) );
+        }
 
-    //     const token = NextRequest?.cookies?.get( 'token' )?.value || ''
-
-    //     if ( isPublicPath && token ) {
-    //         return NextResponse.redirect( new URL( '/', NextRequest?.nextUrl ) )
-    //     }
-
-    //     if ( !isPublicPath && !token ) {
-    //         return NextResponse?.redirect( new URL( '/login', NextRequest?.nextUrl ) )
-    //     }
-
-    // }
+        if ( !isPublicPath && !token ) {
+            return NextResponse?.redirect( new URL( '/login', NextRequest.nextUrl ) );
+        }
+    }
+}
 
 
-    // // See "Matching Paths" below to learn more
-    // export const config = {
-    //     matcher: [
-    //         '/',
-    //         '/profile',
-    //         '/login',
-    //         '/signup',
-    //         '/verifyemail'
-    //     ]
+
+// See "Matching Paths" below to learn more
+export const config = {
+    matcher: [
+        '/',
+        '/profile',
+        '/login',
+        '/signup',
+        '/verifyemail'
+    ]
 }
