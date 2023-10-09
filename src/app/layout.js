@@ -1,4 +1,3 @@
-import Blog from '@/components/client/Blog'
 import NavbarRight from '@/components/NavbarRight'
 import { Radley } from 'next/font/google'
 import './globals.css'
@@ -19,7 +18,7 @@ export default function RootLayout( { children } ) {
       <body className={radley.className}>
         <div>
           <NavbarRight />
-          <Blog />
+          {/* <Blog /> */}
           {/* <PortfolioShowcase /> */}
           {children}
         </div>
