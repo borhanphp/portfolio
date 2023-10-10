@@ -1,6 +1,5 @@
 "use client"
 
-import Link from 'next/link'
 
 const HomePage = () => {
   return (
@@ -13,14 +12,14 @@ const HomePage = () => {
               Lets Connect
             </p>
           </div>
-          <div className="text-center mt-4">
+          {/* <div className="text-center mt-4">
             <Link
               href="https://www.linkedin.com/in/tsmborhan"
               className="border-2 px-3 py-1 text-white bg-[#9B4819]"
             >
               You can send me messages by clicking here.
             </Link>
-          </div>
+          </div> */}
         </div>
 
 
