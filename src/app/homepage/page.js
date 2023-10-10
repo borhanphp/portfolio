@@ -5,12 +5,12 @@ import Link from 'next/link'
 const HomePage = () => {
   return (
     <div className="bg-orange-100 h-[100vh]">
-      <div className="grid place-content-center ">
+      <div className="grid place-content-center">
 
         <div className="grid place-content-center h-screen relative">
           <div>
             <p className="text-[60px] text-center text-[#9B4819]">
-              Lets Connect!
+              Lets Connect
             </p>
           </div>
           <div className="text-center mt-4">
