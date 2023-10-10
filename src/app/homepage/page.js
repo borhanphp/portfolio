@@ -6,15 +6,11 @@ const HomePage = () => {
   return (
     <div className="bg-orange-100 h-[100vh]">
       <div className="grid place-content-center ">
-        {/* <div className="flex justify-center">
-         <div>
-            <Image src="borhan.svg" width={100} height={100} alt="" />
-          </div>
-         </div> */}
+
         <div className="grid place-content-center h-screen relative">
           <div>
             <p className="text-[60px] text-center text-[#9B4819]">
-              Let's Connect!
+              Lets Connect!
             </p>
           </div>
           <div className="text-center mt-4">
