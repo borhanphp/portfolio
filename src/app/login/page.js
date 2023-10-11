@@ -19,6 +19,11 @@ export default function LoginPage() {
     const [buttonDisabled, setButtonDisabled] = React.useState( false );
     const [loading, setLoading] = React.useState( false );
 
+    useEffect( () => {
+        return () => {
+
+        }
+    }, [] )
 
     const onLogin = async () => {
         try {
@@ -44,56 +49,32 @@ export default function LoginPage() {
     }, [user] );
 
     return (
-        // <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        //     <h1>{loading ? "Processing" : "Login"}</h1>
-        //     <hr />
+        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+            <h1>{loading ? "Processing" : "Login"}</h1>
+            <hr />
 
-        //     <label htmlFor="email">email</label>
-        //     <input
-        //         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
-        //         id="email"
-        //         type="text"
-        //         value={user.email}
-        //         onChange={( e ) => setUser( { ...user, email: e.target.value } )}
-        //         placeholder="email"
-        //     />
-        //     <label htmlFor="password">password</label>
-        //     <input
-        //         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
-        //         id="password"
-        //         type="password"
-        //         value={user.password}
-        //         onChange={( e ) => setUser( { ...user, password: e.target.value } )}
-        //         placeholder="password"
-        //     />
-        //     <button
-        //         onClick={onLogin}
-        //         className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">Login here</button>
-        //     <Link href="/signup">Visit Signup page</Link>
-        // </div>
-        <div className="bg-orange-100 h-[100vh]">
-            <div className="grid place-content-center ">
-
-                <div className=" relative">
-                    <div>
-                        <p className="text-[50px] text-center text-[#9B4819]">
-                            Login!
-                        </p>
-                    </div>
-                    <div className="text-center mt-2">
-                        <Link
-                            href="https://www.linkedin.com/in/tsmborhan"
-                            className="border-2 px-3 py-1 text-white bg-[#9B4819]"
-                        >
-                            You can send me messages by clicking here.
-                        </Link>
-                    </div>
-                </div>
-                <div className='mt-3'>
-                    <img src='loginpic.png' alt='' />
-                </div>
-
-            </div>
+            <label htmlFor="email">email</label>
+            <input
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                id="email"
+                type="text"
+                value={user.email}
+                onChange={( e ) => setUser( { ...user, email: e.target.value } )}
+                placeholder="email"
+            />
+            <label htmlFor="password">password</label>
+            <input
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+                id="password"
+                type="password"
+                value={user.password}
+                onChange={( e ) => setUser( { ...user, password: e.target.value } )}
+                placeholder="password"
+            />
+            <button
+                onClick={onLogin}
+                className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">Login here</button>
+            <Link href="/signup">Visit Signup page</Link>
         </div>
     )
 
