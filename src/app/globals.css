@@ -4,7 +4,7 @@
 
 @layer components {
   .home-right-menu-icon {
-    @apply p-2 cursor-pointer border-2 border-[#01539D] rounded-full;
+    @apply p-2 cursor-pointer border-2 border-[#FB923C] rounded-full;
   }
 }
 

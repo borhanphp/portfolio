@@ -1,9 +1,16 @@
-import React from 'react'
+"use client"
+import React from 'react';
+import Dashboard from '../../components/dashboard/Dashboard';
+import DashboardLayout from '../../components/DashboardLayout';
 
-const Dashboard = () => {
+const dashboard = () => {
     return (
-        <div>Dashboard</div>
+        <>
+            <DashboardLayout>
+                <Dashboard />
+            </DashboardLayout>
+        </>
     )
 }
 
-export default Dashboard
+export default dashboard
