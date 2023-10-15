@@ -36,7 +36,7 @@ const NavbarRight = () => {
     ]
     return (
         <div>
-            <div className="absolute right-0 grid place-content-center h-screen">
+            <div className="absolute right-0 grid place-content-center top-40 h-auto">
                 {
                     data && data.map( ( item, index ) => {
                         return (
