@@ -2,7 +2,7 @@
 import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 
 
@@ -11,25 +11,18 @@ import { toast } from "react-hot-toast";
 
 export default function LoginPage() {
     const router = useRouter();
-    const [user, setUser] = React.useState( {
+    const [user, setUser] = useState( {
         email: "",
         password: "",
 
     } )
-    const [buttonDisabled, setButtonDisabled] = React.useState( false );
-    const [loading, setLoading] = React.useState( false );
-
-    useEffect( () => {
-        return () => {
-
-        }
-    }, [] )
-
+    const [buttonDisabled, setButtonDisabled] = useState( false );
+    const [loading, setLoading] = useState( false );
     const onLogin = async () => {
         try {
             setLoading( true );
             const response = await axios.post( "/api/users/login", user );
-            console.log( "Login success", response.data );
+            console.log( "Login success", response );
             toast.success( "Login success" );
             router.push( "/dashboard" );
         } catch ( error ) {

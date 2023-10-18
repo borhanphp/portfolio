@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   try {
     const reqBody = await req.json();
     const { email, password } = reqBody;
-    console.log(reqBody);
+    // console.log(reqBody);
 
     //check if user exists
     const user = await User.findOne({ email });
@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-    console.log("user exists");
+    // console.log("user exists");
 
     //check if password is correct
     const validPassword = await bcryptjs.compare(password, user.password);
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       email: user.email,
     };
     //create token
-    const token = jwt.sign(tokenData, process.env.SECRET_TOKEN, {
+    const token = jwt.sign(tokenData, process.env.SECRET_TOKEN!, {
       expiresIn: "1d",
     });
 
@@ -47,6 +47,7 @@ export async function POST(req: NextRequest) {
     response.cookies.set("token", token, {
       httpOnly: true,
     });
+
     return response;
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
