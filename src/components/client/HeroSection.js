@@ -9,7 +9,7 @@ const HeroSection = () => {
             <Navbar />
             <div className="flex items-center justify-between px-5 gap-5 border-2 py-5">
                 <div className=''>
-                    <p className='text-4xl text-center'>Lets build something exciting together</p>
+                    {/* <p className='text-4xl text-center'>Lets build something exciting together</p> */}
                     <div className='flex items-center justify-center gap-3'>
                         <div>React js</div>
                         <div>Next js</div>
@@ -21,6 +21,7 @@ const HeroSection = () => {
                     <div className='flex items-center justify-center gap-3 pt-2'>
                         <Link href="https://www.linkedin.com/in/tsmborhan">
                             <button className="bg-orange-400 px-2 rounded-sm text-white">Connect on LinkedIn</button>
+                            concent
                         </Link>
                     </div>
                 </div>
