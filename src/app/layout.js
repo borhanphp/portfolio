@@ -1,4 +1,3 @@
-import NavbarRight from '@/components/NavbarRight'
 import { Radley } from 'next/font/google'
 import './globals.css'
 
@@ -17,7 +16,7 @@ export default function RootLayout( { children } ) {
     <html lang="en">
       <body className={radley.className}>
         <div>
-          <NavbarRight />
+          {/* <NavbarRight /> */}
           {children}
         </div>
       </body>

@@ -1,11 +1,13 @@
 "use client"
 
+import HeroSection from '@/components/client/HeroSection'
 import Image from "next/image"
-
 
 const HomePage = () => {
   return (
     <div className="container mx-auto">
+      {/* hero section1 */}
+      <HeroSection />
       {/* blog section */}
       <section>
         <div className="text-center my-6">
