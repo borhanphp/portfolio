@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from './Navbar'
 
 const HeroSection = () => {
@@ -6,7 +8,7 @@ const HeroSection = () => {
 
             <Navbar />
             <div>Connect</div>
-            {/* <div className="flex items-center justify-between px-5 gap-5 border-2 py-5">
+            <div className="flex items-center justify-between px-5 gap-5 border-2 py-5">
                 <div className=''>
                     <p className='text-4xl text-center'>Lets build something exciting together</p>
                     <div className='flex items-center justify-center gap-3'>
@@ -34,7 +36,7 @@ const HeroSection = () => {
                         />
                     </div>
                 </div>
-            </div> */}
+            </div>
 
 
         </>
