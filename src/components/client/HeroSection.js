@@ -7,10 +7,10 @@ const HeroSection = () => {
         <>
 
             <Navbar />
-            <div className="flex items-center justify-between px-5 gap-5 border-2 py-5">
+            <div className="flex items-center justify-between px-5 gap-5 py-5 border-b-2">
                 <div className=''>
                     <p className='text-4xl text-center'>Lets build something exciting together</p>
-                    <div className='flex items-center justify-center gap-3'>
+                    <div className='flex items-center justify-center gap-3 mt-2'>
                         <div>React js</div>
                         <div>Next js</div>
                         <div>Redux</div>
@@ -20,7 +20,7 @@ const HeroSection = () => {
                     </div>
                     <div className='flex items-center justify-center gap-3 pt-2'>
                         <Link href="https://www.linkedin.com/in/tsmborhan">
-                            <button className="bg-[#FB923C] px-2 rounded-sm">Connect on LinkedIn</button>
+                            <button className="bg-[#FB923C] py-2 px-3 rounded-sm">Connect on LinkedIn</button>
                         </Link>
                     </div>
                 </div>
