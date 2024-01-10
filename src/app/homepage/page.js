@@ -1,7 +1,6 @@
 "use client"
 
 import HeroSection from '@/components/client/HeroSection'
-import Image from "next/image"
 
 const HomePage = () => {
   return (
@@ -9,7 +8,7 @@ const HomePage = () => {
       {/* hero section1 */}
       <HeroSection />
       {/* blog section */}
-      <section>
+      {/* <section>
         <div className="text-center my-6">
           <div><p className="text-4xl">My Thoughts</p></div>
           <div><p className="text-2xl">Explore new ways to use technology in your daily life</p></div>
@@ -50,7 +49,7 @@ const HomePage = () => {
 
 
         </div>
-      </section>
+      </section> */}
 
     </div>
   )

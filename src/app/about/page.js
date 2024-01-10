@@ -1,9 +1,8 @@
-"use client"
-
 import Link from 'next/link'
 import React from 'react'
 
 const AboutPage = () => {
+
     return (
         <div className="bg-orange-100 h-[100vh]">
             <div className="grid place-content-center ">
@@ -11,7 +10,7 @@ const AboutPage = () => {
                 <div className=" relative">
                     <div>
                         <p className="text-[50px] text-center text-[#9B4819]">
-                            Tell Me About Yourself !
+                            Tell me about yourself
                         </p>
                     </div>
                     <div className="text-center mt-2">
@@ -26,6 +25,11 @@ const AboutPage = () => {
                 <div className='mt-3'>
                     <img src='aboutme.png' alt='' />
                 </div>
+                {/* <div>
+                    <button onClick={() => { handleApi() }}>
+                        click
+                    </button>
+                </div> */}
 
             </div>
         </div>
