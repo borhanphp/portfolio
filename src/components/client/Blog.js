@@ -1,74 +1,51 @@
-import Link from 'next/link'
-import React from 'react'
+"use client"
+
+import axios from 'axios';
+import Image from 'next/image';
+import { Fragment, useEffect, useState } from 'react';
 
 const Blog = () => {
-    const data = [
-        {
-            title: 'This is blog title one',
-            photo: "/public/image.jpg",
-            link: '/'
-        },
-        // {
-        //     title: 'Portfolio',
-        //     icon: <Briefcase />,
-        //     link: '/portfolio'
-        // },
-        // {
-        //     title: 'Gallery',
-        //     icon: <Aperture />,
-        //     link: '/gallery'
-        // },
-        // {
-        //     title: 'Get in Touch',
-        //     icon: <Mail />,
-        //     link: '/contact-us'
-        // }
-    ]
+    const [blogs, setBlogs] = useState( [] );
+
+    useEffect( () => {
+        axios.get( '/api/blog/allBlog' )
+            .then( ( res ) => {
+                console.log( res );
+                setBlogs( res.data.allBlogs );
+            } )
+    }, [] );
+
     return (
-        <div>
-            <div className="absolute grid place-content-center h-screen">
+        <section>
+            <div className="text-center my-6">
+                <div><p className="text-4xl">My Thoughts</p></div>
+                <div><p className="text-2xl">Explore new ways to use technology in your daily life</p></div>
+            </div>
+            <div className="grid grid-cols-4 gap-4">
                 {
-                    data && data.map( ( item, index ) => {
+                    blogs && blogs?.map( ( item, index ) => {
                         return (
-                            <div key={index} className='mb-2 p-2'>
-                                <div className=' border border-black mb-1 p-1'>
-                                    <div className='ms-3'>
-                                        <img src='image.jpg' alt='' style={{ width: "150px" }} />
+                            <Fragment key={index}>
+                                <div className="col-span-1 cursor-pointer">
+                                    <div className="border p-2">
+                                        <div className="text-center">
+                                            <Image src="/image.jpg" width={400} height={100} alt="borhan uddin" />
+                                        </div>
+                                        <div><p className="text-2xl font-bold text-center">{item?.title}</p></div>
                                     </div>
-                                    <Link href={item?.link}>
-                                        <p className='font-bold text-[20px]'>{item?.title}</p>
-                                    </Link>
                                 </div>
-                                <div className=' border border-black mb-1 p-1'>
-                                    <div className='ms-3'>
-                                        <img src='image.jpg' alt='' style={{ width: "150px" }} />
-                                    </div>
-                                    <Link href={item?.link}>
-                                        <p className='font-bold text-[20px]'>{item?.title}</p>
-                                    </Link>
-                                </div>
-                                <div className=' border border-black mb-1 p-1'>
-                                    <div className='ms-3'>
-                                        <img src='image.jpg' alt='' style={{ width: "150px" }} />
-                                    </div>
-                                    <Link href={item?.link}>
-                                        <p className='font-bold text-[20px]'>{item?.title}</p>
-                                    </Link>
-                                </div>
-                                <div className=' border border-black mb-1 p-1'>
-                                    <div className='ms-3'>
-                                        <img src='image.jpg' alt='' style={{ width: "150px" }} />
-                                    </div>
-                                    <Link href={item?.link}>
-                                        <p className='font-bold text-[20px]'>{item?.title}</p>
-                                    </Link>
-                                </div>
-                            </div>
+                            </Fragment>
                         )
                     } )
                 }
+
+
             </div>
-        </div>
+        </section>
+
+
+
+
     )
 }
 
