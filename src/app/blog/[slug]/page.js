@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import React from 'react';
+import { API } from '../../../../config';
 import data from '../../../../photoData.json';
 
 const getSingleBlog = async ( slug ) => {
     console.log( 'slug', slug );
 
-    const response = await fetch( `http://localhost:3000/api/blog/getBlog/${slug}` );
+    const response = await fetch( `${API}/blog/getBlog/${slug}` );
     if ( !response.ok ) {
         throw new Error( "faild" );
     }
