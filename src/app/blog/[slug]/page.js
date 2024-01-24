@@ -19,13 +19,16 @@ const SingleBlog = async ( { params } ) => {
     console.log( blog );
 
     return (
-        <div className="md:max-w-4xl mx-auto text-center">
-            <div className="border p-4">
+        <div className="md:max-w-3xl mx-auto text-center">
+            <div className="p-4">
+                {/* <div className="">
+                    <div>Author: Borhan Uddin</div>
+                </div> */}
                 <div className="relative">
                     <Image
                         src={`${data[blog?.getBlog?.randomPhoto]?.src}`}
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                         // style
                         // objectFit="contain"
                         // fill
@@ -34,8 +37,9 @@ const SingleBlog = async ( { params } ) => {
 
                     />
                 </div>
-                <div className="text-5xl font-bold mt-2">{blog.getBlog?.title}</div>
-                <div className="mt-2">{blog.getBlog?.body}</div>
+                <div className="text-5xl font-bold mt-4 mb-1">{blog.getBlog?.title}</div>
+
+                <div className="mt-2 text-[18px] text-justify">{blog.getBlog?.body}</div>
             </div>
         </div>
 
