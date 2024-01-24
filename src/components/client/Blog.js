@@ -2,10 +2,13 @@
 
 import axios from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
+import data from '../../../photoData.json';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState( [] );
+    console.log( 'data', data );
 
     useEffect( () => {
         axios.get( '/api/blog/allBlog' )
@@ -26,14 +29,16 @@ const Blog = () => {
                     blogs && blogs?.map( ( item, index ) => {
                         return (
                             <Fragment key={index}>
-                                <div className="col-span-1 cursor-pointer">
-                                    <div className="border p-2">
-                                        <div className="text-center">
-                                            <Image src="/image.jpg" width={400} height={100} alt="borhan uddin" />
+                                <Link href={`/blog/${item?.slug}`}>
+                                    <div className="col-span-1 cursor-pointer">
+                                        <div className="border p-2">
+                                            <div className="text-center">
+                                                <Image src={`${data[item?.randomPhoto]?.src}`} width={400} height={100} alt="borhan uddin" />
+                                            </div>
+                                            <div><p className="text-2xl font-bold text-center">{item?.title}</p></div>
                                         </div>
-                                        <div><p className="text-2xl font-bold text-center">{item?.title}</p></div>
                                     </div>
-                                </div>
+                                </Link>
                             </Fragment>
                         )
                     } )

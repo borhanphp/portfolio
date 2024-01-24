@@ -1,11 +1,14 @@
 import React from "react";
 import DashboardLayout from "../../../components/DashboardLayout";
+import NewBlog from "../../blog/NewBlog/page";
 
 const blogs = () => {
   return (
     <>
       <DashboardLayout>
-        <div>blogs</div>
+        <div>
+          <NewBlog />
+        </div>
       </DashboardLayout>
     </>
   );

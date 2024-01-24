@@ -45,11 +45,19 @@ const blogSchema = new mongoose.Schema(
             type: String,
             default: "published"
         },
+        postedBy: {
+            type: String,
+            default: "Borhan Uddin"
+        },
         featured: {
             type: String,
             default: "no"
         },
         count: {
+            type: Number,
+            default: "0"
+        },
+        randomPhoto: {
             type: Number,
             default: "0"
         }
