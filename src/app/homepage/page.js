@@ -1,12 +1,10 @@
-"use client"
-
 import Blog from '../../components/client/Blog'
+import HeroSection from '../../components/client/HeroSection'
+
 const HomePage = () => {
   return (
-    <div className="container mx-auto">
-      {/* hero section1 */}
-      {/* <HeroSection /> */}
-      {/* blog section */}
+    <div className="">
+      <HeroSection />
       <Blog />
       {/* <About /> */}
     </div>

@@ -19,7 +19,7 @@ const Blog = () => {
     }, [] );
 
     return (
-        <section>
+        <section className='container mx-auto'>
             <div className="text-center my-6">
                 <div><p className="text-4xl">My Thoughts</p></div>
                 <div><p className="text-2xl">Exploring new ways to use technology in my daily life</p></div>
