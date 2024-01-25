@@ -23,9 +23,9 @@ const HeroSection = () => {
                 .to( boxes[4], { x: -300, y: -260, opacity: 0.9 } )
                 .to( boxes[5], { x: -500, y: -190, opacity: 0.9 } )
                 .to( boxes[6], { x: 500, y: -235, opacity: 0.9 } )
-                .to( boxes[7], { x: 300, y: -166, opacity: 0.9 } )
-                .to( boxes[8], { x: -300, y: -206, opacity: 0.9 } )
-                .to( boxes[9], { y: -300, opacity: 0.9 } )
+                .to( boxes[7], { x: 300, y: 50, opacity: 0.9 } )
+                .to( boxes[8], { x: -300, y: 50, opacity: 0.9 } )
+                .to( boxes[9], { y: 10, opacity: 0.9 } )
                 .reverse();
         },
         { scope: container }
