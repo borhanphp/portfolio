@@ -41,8 +41,8 @@ const HeroSection = () => {
     return (
         <>
 
-            <div className="border py-48">
-                <main>
+            <div className="border-b-[1px] p-48">
+                {/* <main>
                     <section className="boxes-container text-center" ref={container}>
 
                         <div className='flex items-center justify-center gap-5'>
@@ -60,14 +60,18 @@ const HeroSection = () => {
                             <div className="box gradient-blue text-5xl opacity-0">HTML</div>
                         </div>
                     </section>
-                </main>
-                {/* <div className='text-center'>
-                    <button className='bg-slate-500 p-2 text-white' onClick={toggleTimeline}>Explore Knowledge</button>
-                </div> */}
-                <div className='mt-[-350px]'>
-                    <div className='text-6xl text-center'>Hello World! I am <span className="text-[#148c91]">Jhon Wick</span></div>
-                    <div className='text-9xl text-center'>Welcome To My World</div>
+                </main> */}
+
+                <div className='w-50'>
+                    <div className='text-9xl text-center'>Welcome to <span className="text-[#148c91]">Invisible</span></div>
+                    <div className='text-9xl text-center'>Where Great Idea Speaks Louder in Silence!</div>
+
+
                 </div>
+                {/* <div className='text-center w-50'>
+                    <button
+                        className='bg-slate-500 p-2 text-white' onClick={toggleTimeline}>Lets Explore the Idea</button>
+                </div> */}
             </div>
 
         </>
